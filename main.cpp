@@ -1,51 +1,65 @@
 #include <iostream>
+#include <string>
 
 void print()
 {
     std::cout<<"call function print\n";
 }
 
+//4
+int globalInt = 12;
+
 
 int main() {
     //1
-    int a = 13, b = 10;
-    int c1 = a - b;
-    int c2 = a + b;
-    int c3 = a * b;
-    int c4 = a / b;
+    double a[] = {4,8};
+
+    double minus = a[1] - a[0];
+    double fl = a[0] / a[1];
 
     //2
-    if(12 > 14)
-        std::cout<<"12 > 14";
+    bool k = false;
+    std::string k1 = "abc";
+    std::string k2 = "aba";
 
-    if(3 > 2)
-        std::cout<<"3 > 2\n";
+    if(k1 > k2)
+        std::cout<<"abc > aba\n";
 
     //3
-    int con = 2;
+    int con = a[0];
     switch (con)
     {
         case 2:
-            std::cout<<"2\n";
+            std::cout<<"con = "<<2<<'\n';
+            break;
         case 4:
-            std::cout<<"3\n";
+            std::cout<<"con = "<<4<<'\n';
+            break;
+        case 6:
+            std::cout<<"con = "<<6<<'\n';
+            break;
+        case 8:
+            std::cout<<"con = "<<8<<'\n';
+            break;
+
     }
 
     //4
-    int loc1 = 2, loc2 = 12;
+    globalInt = 3;
+    std::cout<<"global = "<<globalInt<<'\n';
 
     //5
-    for(uint16_t i = 0; i < 256; ++i)
+    int m = 0;
+    while(m < 256)
     {
-
+        ++m;
     }
 
     //6
     print();
 
     //7
-    int arr[] = {1, 2, 3, 4, 5, 6, 7};
-
+    int arr[] = {12, 13, 14, 151, 6};
 
     return 0;
 }
